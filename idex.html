@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaizen Automation Workflow Map</title>
+
+<style>
+/* ---------------- ROOT STYLE ---------------- */
+:root {
+  --bg: #0e141a;
+  --bg-card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.08);
+  --text: #e8f1f8;
+  --muted: #9bb3c7;
+  --accent: #3fd0ff;
+  --accent-soft: rgba(63,208,255,0.2);
+  --radius: 14px;
+  --max-width: 1050px;
+  --blur: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------- LAYOUT ---------------- */
+body {
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+.header p {
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+/* ---------------- TIMELINE SECTIONS ---------------- */
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  background: var(--bg-card);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(var(--blur));
+  margin-bottom: 16px;
+}
+
+/* ---------------- TASK CARDS ---------------- */
+.tasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.task-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--blur));
+}
+
+.task-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.task-info {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  color: var(--muted);
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (min-width: 800px) {
+  .tasks { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Kaizen Recruitment — Automation Workflow Map</h1>
+    <p>A clear, structured roadmap from Day 1 to Full Automation</p>
+  </div>
+
+  <!-- PHASE 0 -->
+  <div class="section">
+    <div class="section-title">Phase 0 — Preparation (Days 1–2)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Create All Accounts</h3>
+        <div class="task-info">
+          <ul>
+            <li>Twilio (SMS + Voice)</li>
+            <li>Vapi (AI voice agent)</li>
+            <li>WhatsApp Cloud API (Meta)</li>
+            <li>GHL Workspace</li>
+            <li>Make.com / n8n</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Phone Numbers & API Access</h3>
+        <div class="task-info">
+          <ul>
+            <li>Buy Twilio numbers</li>
+            <li>Setup WhatsApp number ID</li>
+            <li>Store all API keys securely</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="section">
+    <div class="section-title">Phase 1 — GHL Data Architecture (Days 3–7)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Custom Fields Setup</h3>
+        <div class="task-info">
+          <ul>
+            <li>Trade & Experience</li>
+            <li>PPE & Tools</li>
+            <li>Certifications</li>
+            <li>Attendance / ETA</li>
+            <li>Compliance Flags</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Tags & Pipelines</h3>
+        <div class="task-info">
+          <ul>
+            <li>TRADE-*</li>
+            <li>CERT-*</li>
+            <li>DOC-*</li>
+            <li>PPE-*</li>
+            <li>JOB-*</li>
+            <li>STATUS-*</li>
+            <li>RISK-*</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="section">
+    <div class="section-title">Phase 2 — Integrations & Webhooks (Days 8–14)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Connect Communication Channels</h3>
+        <div class="task-info">
+          <ul>
+            <li>WhatsApp template API</li>
+            <li>Twilio SMS / Voice webhooks</li>
+            <li>Vapi voice agent routing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Automation Backbone Setup</h3>
+        <div class="task-info">
+          <ul>
+            <li>Make.com / n8n webhook receivers</li>
+            <li>Error retry logic</li>
+            <li>OCR document parser</li>
+            <li>Message routing engine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="section">
+    <div class="section-title">Phase 3 — Core Candidate Workflows (Days 15–30)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Inbound Workflows</h3>
+        <div class="task-info">
+          <ul>
+            <li>WhatsApp Validation</li>
+            <li>Opt-In Confirmation</li>
+            <li>Availability Capture</li>
+            <li>Tools & PPE Check</li>
+            <li>Trade Verification</li>
+            <li>Document Upload / Certification Check</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Outbound Workflows</h3>
+        <div class="task-info">
+          <ul>
+            <li>Availability Requests</li>
+            <li>PPE / Tool reminders</li>
+            <li>Certification reminders</li>
+            <li>Re-engagement sequences</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Job Matching Engine</h3>
+        <div class="task-info">
+          <ul>
+            <li>Trade distance match</li>
+            <li>Compliance check</li>
+            <li>Suitability scoring</li>
+            <li>Auto-book if score ≥ 80</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Job Offer Workflow</h3>
+        <div class="task-info">
+          <ul>
+            <li>Send offer templates</li>
+            <li>YES/NO structured logic</li>
+            <li>Move to pre-start process</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 4 -->
+  <div class="section">
+    <div class="section-title">Phase 4 — Pre-Start & Attendance (Days 31–38)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Pre-Start Pack</h3>
+        <div class="task-info">
+          <ul>
+            <li>Site address</li>
+            <li>Supervisor contact</li>
+            <li>RAMS confirmation</li>
+            <li>Start time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Attendance Workflow</h3>
+        <div class="task-info">
+          <ul>
+            <li>24-hour confirmation</li>
+            <li>Night-before confirmation</li>
+            <li>Morning-of check</li>
+            <li>Mandatory ETA for Tier 1</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>No-Show Prevention</h3>
+        <div class="task-info">
+          <ul>
+            <li>Extra reminders</li>
+            <li>Vapi emergency call</li>
+            <li>Escalate to recruiter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 5 -->
+  <div class="section">
+    <div class="section-title">Phase 5 — Test & Validate (Days 39–45)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Testing</h3>
+        <div class="task-info">
+          <ul>
+            <li>5 test personas</li>
+            <li>Failover simulations</li>
+            <li>Load testing</li>
+            <li>Template approvals</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Quality Control</h3>
+        <div class="task-info">
+          <ul>
+            <li>Conversation logs</li>
+            <li>Error logs</li>
+            <li>Workflow audit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 6 -->
+  <div class="section">
+    <div class="section-title">Phase 6 — Launch (Days 46–52)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Rollout</h3>
+        <div class="task-info">
+          <ul>
+            <li>Enable workflows in GHL</li>
+            <li>Middleware go-live</li>
+            <li>Auto-booking enabled</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 7 -->
+  <div class="section">
+    <div class="section-title">Phase 7 — Monitoring & Continuous Improvement (Day 53+)</div>
+
+    <div class="tasks">
+      <div class="task-card">
+        <h3>Monitoring</h3>
+        <div class="task-info">
+          <ul>
+            <li>No-show rate</li>
+            <li>WhatsApp delivery</li>
+            <li>Vapi call success</li>
+            <li>Recruiter alerts</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="task-card">
+        <h3>Monthly Optimization</h3>
+        <div class="task-info">
+          <ul>
+            <li>Update templates</li>
+            <li>Improve scoring logic</li>
+            <li>Retune reminders</li>
+            <li>Expand automation coverage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
